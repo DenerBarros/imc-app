@@ -1,54 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Explorer | Calculadora de IMC</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script scrc="script.js" defer></script>
-    <title>Calculadora de IMC</title>
-</head>
-<body>
+		<link rel="stylesheet" href="./style.css" />
+		<script type="module" src="./js/script.js" defer></script>
+	</head>
+	<body>
+		<div class="alert-error">Digite somente números</div>
 
-    <div class="alert-error">
-        Digite Somente números
-    </div>
-    <div class="container">
-        <main class="card">
-            <form action="">
-                <h1 class="title">Cálculo de IMC</h1>
-                <div class="input-wraper">
-                    <label for="weight">Peso (kg)</label>
-                    <input id="weight" type="text" placeholder="60" />
-                </div>
+		<div class="container">
+			<main class="card">
+				<form>
+					<h1 class="title">Cálculo de IMC</h1>
 
-                <div class="input-wraper">
-                    <label for="height">Altura (m)</label>
-                    <input id="height" type="text" placeholder="165" />
-                </div>
+					<div class="input-wrapper">
+						<label for="weight">Peso (kg)</label>
+						<input type="text" id="weight" placeholder="60" />
+					</div>
 
-                <button>Calcular IMC 
-                    <img src="./assets/arrow.svg" alt="Seta apontando para a direita">
-                </button>
-            </form>
-        </main>
-    </div>
+					<div class="input-wrapper">
+						<label for="height">Altura (cm)</label>
+						<input type="text" id="height" placeholder="165" />
+					</div>
 
-    <div class="modal-wrapper">
-        <div class="modal card">
-            <h2 class="title">
+					<button type="submit">Calcular IMC <ion-icon name="arrow-forward-outline"></ion-icon></button>
+				</form>
+			</main>
+		</div>
 
-                <button class="close">
-                    <img src="./assets/close.svg" alt="Fechar o Modal">
-                </button>
-                Seu IMC é de 28
-            </h2>
-        </div>
-    </div>
-   
-</body>
+		<div class="modal-wrapper">
+			<div class="modal card">
+				<h2 class="title">
+					<button class="close">
+						<ion-icon name="close-outline"></ion-icon>
+					</button>
+					<span>Seu IMC é 28</span>
+				</h2>
+			</div>
+		</div>
+
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	</body>
 </html>
